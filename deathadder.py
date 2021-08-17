@@ -1,2 +1,2 @@
 def deathadder(x,y):
-   return x+y+666
+   return x+y+555
