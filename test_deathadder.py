@@ -2,4 +2,4 @@ import deathadder
 print("This is the world's hardest test!")
 
 def test_deathadder():
-  assert True
+  assert deathadder.deathadder(1,2) == 669
