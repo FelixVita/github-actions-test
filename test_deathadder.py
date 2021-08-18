@@ -10,3 +10,5 @@ def test_deathadder():
   assert deathadder.deathadder(333,1) == 1000
 
 import greeting
+
+import pi
