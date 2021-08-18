@@ -7,3 +7,9 @@ print("changelog 3")
 print("howdy doody")
 x = 3
 print(f"awesome {str(x)}")
+
+import getpass
+import platform
+username = getpass.getuser()
+hostname = platform.node()
+print(f"Hello there, {username}@{hostname}")
