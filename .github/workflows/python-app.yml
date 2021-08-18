@@ -15,16 +15,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
-    - run: |
-        output=$(python release_mail_generator.py v2.21)
-        output="${output//'%'/'%25'}"
-        output="${output//$'\n'/'%0A'}"
-        output="${output//$'\r'/'%0D'}" 
-        echo "::set-output name=changelog::$output"
-      id: step1
-    - name: Print changelog
-      run: echo "${{ steps.step1.outputs.changelog }}"
+    - uses: actions/checkout@v2    
     - name: Set up Python 3.9
       uses: actions/setup-python@v2
       with:
@@ -43,3 +34,11 @@ jobs:
     - name: Test with pytest
       run: |
         pytest
+        output=$(python release_mail_generator.py v2.21)
+        output="${output//'%'/'%25'}"
+        output="${output//$'\n'/'%0A'}"
+        output="${output//$'\r'/'%0D'}" 
+        echo "::set-output name=changelog::$output"
+      id: step1
+    - name: Print changelog
+      run: echo "${{ steps.step1.outputs.changelog }}"
