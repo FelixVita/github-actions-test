@@ -8,3 +8,5 @@ import deathadder
 def test_deathadder():
   assert deathadder.deathadder(1,2) == 669
   assert deathadder.deathadder(333,1) == 1000
+
+import greeting

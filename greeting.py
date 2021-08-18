@@ -1,10 +1,13 @@
-# import getpass
-# import platform
-
-# username = getpass.getuser()
-# hostname = platform.node()
-
-
 print('start')
-print(8 + 'a')
+import getpass
+import platform
+
+username = getpass.getuser()
+hostname = platform.node()
+
+if not username.startswith('m'):
+    print('a' + 1)
+else:
+    print('a' + str(1))
+
 print('finish')
